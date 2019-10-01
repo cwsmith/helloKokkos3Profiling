@@ -49,3 +49,9 @@ bsub -W 5 -nnodes 1 -P yourProjectId < ./run.sh
 
 see `profilingOutput.txt`
 
+
+Running under `nvprof` with no metrics collected, and the nvprof-connector
+kokkos-tools library set in the environment, will produce output with the
+named kokkos kernels listed under the NVTX heading.  'regions' created
+with `Kokkos::Profiling::pushRegion(...)/popRegion()` will not be listed.
+When metrics are collected the nvprof output will not contain the named kokkos kernels.
