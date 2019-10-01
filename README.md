@@ -42,7 +42,7 @@ chmod +x run.sh
 submit the job:
 
 ```
-bsub -W 5 -nnodes 1 -P yourProjectId ./run.sh
+bsub -W 5 -nnodes 1 -P yourProjectId < ./run.sh
 ```
 
 # expected output
