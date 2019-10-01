@@ -55,3 +55,6 @@ kokkos-tools library set in the environment, will produce output with the
 named kokkos kernels listed under the NVTX heading.  'regions' created
 with `Kokkos::Profiling::pushRegion(...)/popRegion()` will not be listed.
 When metrics are collected the nvprof output will not contain the named kokkos kernels.
+
+The PR https://github.com/kokkos/kokkos-tools/pull/66,
+adds 'regions' under the NVTX heading when no metrics are collected.
