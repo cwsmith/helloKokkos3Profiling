@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.12)
+project(helloKokkos CXX)
+find_package(Kokkos CONFIG REQUIRED)
+add_executable(hello helloKokkos.cpp)
+target_link_libraries(hello Kokkos::kokkos)

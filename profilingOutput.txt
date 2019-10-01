@@ -1,0 +1,30 @@
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) spectrum-mpi/10.3.0.1-20190611
+
+==18752== NVPROF is profiling process 18752, command: /autofs/nccs-svm1_proj/phy122/cws/develop/build-hk3p/hello 1048576
+CUDA Hook Library: Failed to find symbol mem_find_dreg_entries, /autofs/nccs-svm1_proj/phy122/cws/develop/build-hk3p/hello: undefined symbol: __PAMI_Invalidate_region
+==18752== Profiling application: /autofs/nccs-svm1_proj/phy122/cws/develop/build-hk3p/hello 1048576
+-----------------------------------------------------------
+KokkosP: NVTX Analyzer Connector (sequence is 0, version: 20171029)
+-----------------------------------------------------------
+N 1048576
+-----------------------------------------------------------
+KokkosP: Finalization of NVTX Connector. Complete.
+-----------------------------------------------------------
+Kokkos::Cuda ERROR: Failed to call Kokkos::Cuda::finalize()
+==18752== Profiling result:
+==18752== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla V100-SXM2-16GB (0)"
+    Kernel: Kokkos::_GLOBAL__N__52_tmpxft_0001be0b_00000000_6_Kokkos_Cuda_Locks_cpp1_ii_915ea793::init_lock_array_kernel_threadid(int)
+          1                        achieved_occupancy                        Achieved Occupancy    0.486476    0.486476    0.486476
+    Kernel: Kokkos::_GLOBAL__N__52_tmpxft_0001be0b_00000000_6_Kokkos_Cuda_Locks_cpp1_ii_915ea793::init_lock_array_kernel_atomic(void)
+          1                        achieved_occupancy                        Achieved Occupancy    0.445980    0.445980    0.445980
+    Kernel: Kokkos::Impl::_GLOBAL__N__55_tmpxft_0001be03_00000000_6_Kokkos_Cuda_Instance_cpp1_ii_a8bc5097::query_cuda_kernel_arch(int*)
+          1                        achieved_occupancy                        Achieved Occupancy    0.015625    0.015625    0.015625
+    Kernel: void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<Kokkos::Impl::ViewValueFunctor<Kokkos::Cuda, double, bool=1>, Kokkos::RangePolicy<>, Kokkos::Cuda>>(Kokkos::Cuda)
+          1                        achieved_occupancy                        Achieved Occupancy    0.056330    0.056330    0.056330
+    Kernel: _ZN6Kokkos4Impl33cuda_parallel_launch_local_memoryINS0_11ParallelForIZ4mainEUlRKiE_NS_11RangePolicyIJNS_4CudaEEEES7_EEEEvT_
+          1                        achieved_occupancy                        Achieved Occupancy    0.077239    0.077239    0.077239
+======== Error: Application returned non-zero code 1
