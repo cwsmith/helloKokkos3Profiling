@@ -9,6 +9,9 @@ int main(int argc, char** argv) {
   Kokkos::parallel_for("computeFoo",N,KOKKOS_LAMBDA(const int& i) {
     foo(i) = (i*i*i)/(i+1);
   });
+  Kokkos::parallel_for("computeBar",N,KOKKOS_LAMBDA(const int& i) {
+    foo(i) = (i*i*i)/(i+2);
+  });
   Kokkos::Profiling::popRegion();
   Kokkos::finalize();
   return 0;
